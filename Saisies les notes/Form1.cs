@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Saisies_les_notes
 {
@@ -123,6 +124,8 @@ namespace Saisies_les_notes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundPlayer = new SoundPlayer(@"Saisies les notes\Resources\click1.wav\click1.wav");
+            soundPlayer.Play();
             float TP1, TP2, TP3, notePratique, noteFinale, totalTP, noteGlobale;
 
             for (int i = 1; i <= 5; i++)
@@ -190,6 +193,8 @@ namespace Saisies_les_notes
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\BruceWayne\Downloads\click1.wav");
+            soundPlayer.Play();
             for (int i = 0; i < 10; i++)
             {
                 TextBox textBox = this.Controls.Find("textBox" + i, true).FirstOrDefault() as TextBox;
@@ -235,7 +240,14 @@ namespace Saisies_les_notes
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundPlayer = new SoundPlayer(@"C:\Users\BruceWayne\Downloads\click2.wav");
+            soundPlayer.Play();
             Application.Exit();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
